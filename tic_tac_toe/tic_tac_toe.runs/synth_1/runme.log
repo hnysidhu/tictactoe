@@ -1,0 +1,335 @@
+
+*** Running vivado
+    with args -log game.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source game.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source game.tcl -notrace
+Command: synth_design -top game -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18228 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1259.805 ; gain = 76.863 ; free physical = 688 ; free virtual = 21045
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'game' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:23]
+INFO: [Synth 8-6157] synthesizing module 'position_registers' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'position_registers' (1#1) [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:88]
+INFO: [Synth 8-6157] synthesizing module 'winner_detector' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:412]
+INFO: [Synth 8-6157] synthesizing module 'winner_detect_3' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:430]
+INFO: [Synth 8-6155] done synthesizing module 'winner_detect_3' (2#1) [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:430]
+INFO: [Synth 8-6155] done synthesizing module 'winner_detector' (3#1) [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:412]
+INFO: [Synth 8-6157] synthesizing module 'position_decoder' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:381]
+INFO: [Synth 8-6155] done synthesizing module 'position_decoder' (4#1) [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:381]
+INFO: [Synth 8-6157] synthesizing module 'illegal_move_detector' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:343]
+INFO: [Synth 8-6155] done synthesizing module 'illegal_move_detector' (5#1) [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:343]
+INFO: [Synth 8-6157] synthesizing module 'nospace_detector' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:321]
+INFO: [Synth 8-6155] done synthesizing module 'nospace_detector' (6#1) [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:321]
+INFO: [Synth 8-6157] synthesizing module 'fsm_controller' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:244]
+	Parameter IDLE bound to: 2'b00 
+	Parameter PLAYER bound to: 2'b01 
+	Parameter COMPUTER bound to: 2'b10 
+	Parameter GAME_DONE bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:272]
+INFO: [Synth 8-6155] done synthesizing module 'fsm_controller' (7#1) [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:244]
+INFO: [Synth 8-6155] done synthesizing module 'game' (8#1) [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1304.430 ; gain = 121.488 ; free physical = 700 ; free virtual = 21056
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1304.430 ; gain = 121.488 ; free physical = 701 ; free virtual = 21057
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1304.430 ; gain = 121.488 ; free physical = 701 ; free virtual = 21057
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/constrs_1/new/constraint.xdc]
+Finished Parsing XDC File [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/constrs_1/new/constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/constrs_1/new/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/game_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/game_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.305 ; gain = 0.000 ; free physical = 454 ; free virtual = 20810
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 531 ; free virtual = 20888
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 531 ; free virtual = 20888
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 533 ; free virtual = 20890
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'fsm_controller'
+INFO: [Synth 8-5544] ROM "player_play" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:275]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:275]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                  PLAYER |                               01 |                               01
+                COMPUTER |                               10 |                               10
+               GAME_DONE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'fsm_controller'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:275]
+WARNING: [Synth 8-327] inferring latch for variable 'computer_play_reg' [/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.srcs/sources_1/new/game.v:279]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 523 ; free virtual = 20880
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 32    
++---Registers : 
+	                2 Bit    Registers := 9     
++---Muxes : 
+	  17 Input     15 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 15    
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module position_registers 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 9     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 9     
+Module winner_detect_3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
+Module position_decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input     15 Bit        Muxes := 1     
+Module fsm_controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3332] Sequential element (tic_tac_toe_controller/FSM_sequential_next_state_reg[1]) is unused and will be removed from module game.
+WARNING: [Synth 8-3332] Sequential element (tic_tac_toe_controller/FSM_sequential_next_state_reg[0]) is unused and will be removed from module game.
+WARNING: [Synth 8-3332] Sequential element (tic_tac_toe_controller/computer_play_reg) is unused and will be removed from module game.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 510 ; free virtual = 20868
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 385 ; free virtual = 20743
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 378 ; free virtual = 20736
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 378 ; free virtual = 20736
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 378 ; free virtual = 20736
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 378 ; free virtual = 20736
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 378 ; free virtual = 20736
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 378 ; free virtual = 20736
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 378 ; free virtual = 20736
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 378 ; free virtual = 20736
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |    14|
+|3     |LUT3 |     4|
+|4     |LUT4 |    12|
+|5     |LUT5 |     1|
+|6     |LUT6 |    61|
+|7     |FDCE |    20|
+|8     |IBUF |    12|
+|9     |OBUF |    20|
++------+-----+------+
+
+Report Instance Areas: 
++------+-------------------------+-------------------+------+
+|      |Instance                 |Module             |Cells |
++------+-------------------------+-------------------+------+
+|1     |top                      |                   |   145|
+|2     |  position_reg_unit      |position_registers |    83|
+|3     |  tic_tac_toe_controller |fsm_controller     |    29|
++------+-------------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 378 ; free virtual = 20736
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1660.305 ; gain = 121.488 ; free physical = 432 ; free virtual = 20791
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1660.305 ; gain = 477.363 ; free physical = 432 ; free virtual = 20791
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1660.305 ; gain = 477.500 ; free physical = 432 ; free virtual = 20790
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/2017csb1090/Downloads/tic_tac_toe/tic_tac_toe.runs/synth_1/game.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file game_utilization_synth.rpt -pb game_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1684.316 ; gain = 0.000 ; free physical = 433 ; free virtual = 20791
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 12 00:18:37 2018...
